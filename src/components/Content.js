@@ -10,7 +10,7 @@ const Content = (props) => {
     return <>
         <div className="content">
             {props.content && props.content.map(element => {
-                return (<div className="display-content" key={element.orderNumber}>{displayMap[element.dataType]?.(element.content.content)}</div>);
+                return (<div className="display-content" key={element.orderNumber}>{displayMap[element.dataType]?.(element.data.content)}</div>);
             })}
         </div>
     </>
