@@ -3,6 +3,7 @@ import Router from "next/router";
 import nProgress from "nprogress";
 import 'nprogress/nprogress.css'
 import "@/styles/App.css";
+import { preloadTopics } from "@/components/searchIndex";
 
 export default function App({ Component, pageProps }) {
   useEffect(() => {
@@ -18,6 +19,8 @@ export default function App({ Component, pageProps }) {
     Router.events.on("routeChangeStart", handleStart);
     Router.events.on("routeChangeComplete", handleStop);
     Router.events.on("routeChangeError", handleStop);
+
+    preloadTopics().catch(console.error);
 
     return () => {
       Router.events.off("routeChangeStart", handleStart);

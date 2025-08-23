@@ -96,22 +96,79 @@
 /* Header */
 .header {
   background-color: var(--color-header-bg);
+  color: var(--color-header-text);
+  padding: 0.3rem;
+  display: flex;
+  align-items: center;
   
-  padding: 1rem;
-  font-size: 1.8rem;
   font-weight: bold;
-  text-align: center;
+  text-align:center;
+  z-index: 1000;
+  position: relative;
 }
 
-.header a {
+.header-big-child{
+  position: relative;
+  flex: 4;
+  padding-left: 10%;
+  padding-right: 10%;
+  z-index: 9;
+}
+
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 10%;
+  background: white;
+  border: 1px solid #ccc;
+  margin-top: 4px;
+  width: 80%;  /* match input width */
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 2000;
+  border-radius: 6px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  font-size: 1.0rem;
+  color: var(--color-content-text);
+}
+
+.search-result-row {
+  padding: 8px 12px;
+  cursor: pointer;
+  color: var(--color-content-text);
+}
+
+.search-result-row a {
+  color: var(--color-content-text);
+}
+
+.search-result-row:hover {
+  background: #f5f5f5;
+}
+
+
+.header-child{
+  flex: 1;
+  position: relative;
+}
+
+.header img {
+  height: 4rem;
+  width: auto;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+a {
   text-decoration: none;
-  color: var(--color-header-text);
 }
 
 /* Menu bar */
 .menu-bar {
   display: flex;
   background-color: var(--color-menu-bg);
+  position: relative;
+  z-index: 10;
 }
 
 .menu-item {
@@ -238,4 +295,45 @@
 
 @keyframes l12 { 
   100%{transform: rotate(.5turn)}
+}
+
+
+.custom-button {
+  background-color: #1F2937; /* dark navy */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 3px;
+}
+
+.custom-button:hover {
+  background-color: #374151; /* lighter navy on hover */
+}
+
+.custom-button:active {
+  transform: scale(0.98);
+}
+
+.custom-input {
+  padding: 10px;
+  border: 1px solid #d1d5db; /* light gray */
+  border-radius: 6px;
+  font-size: 16px;
+  width: 100%;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  margin-bottom: 2%;
+}
+
+.custom-input:focus {
+  outline: none;
+  border-color: #3B82F6; /* blue */
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.search-input{
+  margin: 0;
 }
