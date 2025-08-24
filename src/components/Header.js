@@ -27,7 +27,7 @@ const Header = () => {
             <SearchResults results={results} handleResults={setResults}></SearchResults>
       </div>
       
-            <div className="header-child"><Link href={"https://techtipsuzbcreator.netlify.app"} target="_blank" rel="noopener noreferrer">O'zingiz qo'llanma yaratmoqchimisiz? Bu yerga bosing.</Link></div>
+            <div className="header-child"><Link href={"https://techtipsuzbcreator.netlify.app"} target="_blank" rel="noopener noreferrer">O{"'"}zingiz qo{"'"}llanma yaratmoqchimisiz? Bu yerga bosing.</Link></div>
         </div>
     </>
 }
