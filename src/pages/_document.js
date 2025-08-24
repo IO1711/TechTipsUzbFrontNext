@@ -5,7 +5,7 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <link rel="icon" type="image/svg+xml" href="/full_logo.svg" />
-        <meta name="google-site-verification" content="google-site-verification=e--hMoWnWpQcnuzV3R0tNW2Ie_sDQdS9uCR8OwaerGs" />
+        <meta name="google-site-verification" content="3bU3l35TBllkvdDl03e8-kk1E23v1zbLRtJj4NpkycM" />
       </Head>
       <body>
         <Main />
