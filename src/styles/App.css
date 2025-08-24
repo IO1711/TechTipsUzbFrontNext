@@ -152,6 +152,10 @@
   position: relative;
 }
 
+.header-child a {
+  color: var(--color-header-text);
+}
+
 .header img {
   height: 4rem;
   width: auto;
